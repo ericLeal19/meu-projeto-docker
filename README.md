@@ -123,11 +123,14 @@ Print 3 — workflow de CD verde na aba Actions ![alt text](<docs/image/17 - Git
 Print 4 — imagem publicada no Docker Hub ![alt text](<docs/image/18 - Imagem-DockerHub.png>)
 Print 5 — docker pull baixando a imagem publicada ![alt text](<docs/image/19 - Baixando-Imagem-DockerHub.png>)
 Respostas
+
 1. O que é o Docker Hub? 
+
 É quase, na prática, um GitHub do Docker. Trata-se de um ambiente para guardar/publicar imagens que foram
 criadas por mim.
 
 2. Diferença entre CI e CD: 
+
 CI trata-se de um mecanismo de integração/automação para executar determinados passo/testes antes de 
 juntar (dar merge) no github, facilitando o processo de publicação e atualização do projeto.
 
@@ -140,10 +143,12 @@ CI (Integração Contínua): É o seu controle de qualidade automático. Ele rod
 CD (Entrega ou Implantação Contínua): Enviar a imagem pronta para o Docker Hub usando tokens é o que chamamos de Entrega (Delivery) — o pacote está finalizado e disponível. O passo além disso é a Implantação (Deployment), que seria automatizar a etapa de pegar essa imagem do Docker Hub e colocá-la para rodar diretamente em um servidor de produção para o usuário final.
 
 3. Por que usar token e Secrets em vez de escrever usuário e senha no cd.yml ? 
+
 Trata-se de um procedimento de segurança básico no desenvolvimento, pois o usuário, senha e tokens
 são dados sensíveis que podem ser extremamente explorados por atacantes/pessoas maliciosas.
 
 4. O que significa a tag latest ?
+
 A tag "latest" é um padrão usado no ambiente de versionamento para se tratar da última versão 
 disponível de alguma imagem/sistema. Nem sempre o mais atual é o mais seguro ou mais estável.
 
