@@ -106,6 +106,49 @@ Durante a atividade, enfrentei problemas de permissão (`EACCES`) para criar o b
 * [x] PR com CI vermelho documentado
 * [x] Todos os 9 prints no README
 
+
+## CD — Publicação no Docker Hub
+Aluno(a): Eric Gabriel Silva Leal   Turma: Vespertino
+Usuário do Docker Hub: ericgsleal
+Imagem publicada: ericgsleal/meu-projeto-docker:latest
+Link da imagem no Docker Hub: https://hub.docker.com/r/ericgsleal/meu-projeto-docker
+Dispara quando: push na branch main
+Arquivo do workflow: .github/workflows/cd.yml
+
+
+Print 1 — token criado no Docker Hub ![alt text](<docs/image/15 - Criando o token.png>)
+Print 2 — Secrets cadastrados no GitHub (DOCKERHUB_USERNAME e
+DOCKERHUB_TOKEN) ![alt text](<docs/image/16 - Token e variáveis.png>)
+Print 3 — workflow de CD verde na aba Actions ![alt text](<docs/image/17 - Github CD.png>)
+Print 4 — imagem publicada no Docker Hub ![alt text](<docs/image/18 - Imagem-DockerHub.png>)
+Print 5 — docker pull baixando a imagem publicada ![alt text](<docs/image/19 - Baixando-Imagem-DockerHub.png>)
+Respostas
+1. O que é o Docker Hub? 
+É quase, na prática, um GitHub do Docker. Trata-se de um ambiente para guardar/publicar imagens que foram
+criadas por mim.
+
+2. Diferença entre CI e CD: 
+CI trata-se de um mecanismo de integração/automação para executar determinados passo/testes antes de 
+juntar (dar merge) no github, facilitando o processo de publicação e atualização do projeto.
+
+O CD é um mecanismo para publicação de projetos em outros ambientes como o DockerHub através de tokens 
+e APIs.
+
+Definição da IA:
+CI (Integração Contínua): É o seu controle de qualidade automático. Ele roda builds e testes para garantir que o código novo não quebre o sistema quando você der o merge (seja no GitHub, GitLab, Bitbucket, etc.).
+
+CD (Entrega ou Implantação Contínua): Enviar a imagem pronta para o Docker Hub usando tokens é o que chamamos de Entrega (Delivery) — o pacote está finalizado e disponível. O passo além disso é a Implantação (Deployment), que seria automatizar a etapa de pegar essa imagem do Docker Hub e colocá-la para rodar diretamente em um servidor de produção para o usuário final.
+
+3. Por que usar token e Secrets em vez de escrever usuário e senha no cd.yml ? 
+Trata-se de um procedimento de segurança básico no desenvolvimento, pois o usuário, senha e tokens
+são dados sensíveis que podem ser extremamente explorados por atacantes/pessoas maliciosas.
+
+4. O que significa a tag latest ?
+A tag "latest" é um padrão usado no ambiente de versionamento para se tratar da última versão 
+disponível de alguma imagem/sistema. Nem sempre o mais atual é o mais seguro ou mais estável.
+
+
+
 ```
 
 ```
